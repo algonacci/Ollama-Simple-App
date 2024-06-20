@@ -4,9 +4,11 @@ import requests
 import json
 
 app = Flask(__name__)
+CORS(app, resources={
+    r"/*": {"origins": ["https://ollama-simple-app.netlify.app"]}
+})
 
 
-@cross_origin()
 @app.route('/generate', methods=['POST'])
 def generate():
     data = request.json
