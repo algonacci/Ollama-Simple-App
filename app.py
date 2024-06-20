@@ -1,5 +1,5 @@
 from flask import Flask, request, Response, stream_with_context
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 import requests
 import json
 
