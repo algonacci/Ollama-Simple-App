@@ -1,12 +1,12 @@
 from flask import Flask, request, Response, stream_with_context
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import requests
 import json
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
 
 
+@cross_origin()
 @app.route('/generate', methods=['POST'])
 def generate():
     data = request.json

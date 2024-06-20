@@ -9,7 +9,7 @@ async function sendMessage() {
   document.getElementById("response").textContent = "";
   document.getElementById("response-container").style.display = "block";
 
-  const response = await fetch("https://80f9-180-244-128-79.ngrok-free.app/generate", {
+  const response = await fetch("https://a8c2-180-244-128-79.ngrok-free.app/generate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
